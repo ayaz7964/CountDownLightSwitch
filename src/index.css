@@ -7,6 +7,12 @@
     --btn-bg: #4caf50;
     --btn-hover: #45a049;
   }
+  .AHP{
+    color: black;
+    background-color: red;
+    width: 90%;
+    
+  }
   body.light {
     --bg-color: #f8f8f8;
     --text-color: #333;
@@ -81,7 +87,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #e5d4d4;
     transition: background-color 0.4s;
     border-radius: 26px;
   }
@@ -92,7 +98,7 @@
     width: 20px;
     left: 3px;
     bottom: 3px;
-    background-color: #fff;
+    background-color: #120a0a;
     transition: transform 0.4s;
     border-radius: 50%;
   }
@@ -117,7 +123,7 @@
   }
   .progress {
     height: 100%;
-    width: 0%;
+    /* width: 0%; */
     background: var(--accent-color);
     transition: width 1s linear;
   }

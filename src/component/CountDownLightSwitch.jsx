@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 
 export default function CountDownLightSwitch() {
     let [timer , setTimmer ] = useState(30)
+    let [pro , setPro] = useState(20)
+    let cl 
     function ChangeHandle(){
        
     }
@@ -24,15 +26,27 @@ export default function CountDownLightSwitch() {
     </div>
     <div className="timer-section">
       <div className="progress-bar">
-        <div className="progress" id="progress"></div>
+        <div className="progress" id="progress" width={pro}>
+        <div className='AHP' > </div>
+        </div>
         
       </div>
       <div className="timer" id="timerDisplay">{timer}s   </div>
       <div className="btn-group">
         <button id="startButton" onClick={()=>{
+             cl = setInterval(()=>{
+                setTimmer(timer--)
+                if(timer ==-1 ){
+                    clearInterval(cl)
+                }
+            } , 1000)
+           
             
+            console.log(timer--)
         }}>Start Timer</button>
-        <button id="resetButton">Reset Timer</button>
+        <button id="resetButton" onClick={()=>{
+            
+            setTimmer(30)}}>Reset Timer</button>
       </div>
       <div className="message" id="messageArea"></div>
     </div>
